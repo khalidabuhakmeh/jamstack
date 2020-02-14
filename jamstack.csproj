@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <Target Name="Static" BeforeTargets="Build">
+    <Exec Command="npm run build" />
+  </Target>
+
 </Project>
