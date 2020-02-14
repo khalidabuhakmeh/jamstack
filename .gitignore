@@ -5,7 +5,7 @@
 
 ## JAMStack files
 wwwroot/js/dist/
-wwwroot/*.html
+wwwroot/**/*.html
 
 # User-specific files
 *.rsuser
