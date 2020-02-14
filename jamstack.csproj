@@ -4,6 +4,22 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove=".cache\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove=".cache\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".cache\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove=".cache\**" />
+  </ItemGroup>
+
   <Target Name="Static" BeforeTargets="Build">
     <Exec Command="npm run build" />
   </Target>

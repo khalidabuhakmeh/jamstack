@@ -19,6 +19,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@vue/component-compiler-utils": "^3.1.1",
+    "axios": "^0.19.2",
     "parcel-bundler": "^1.12.4",
     "vue": "^2.6.11",
     "vue-custom-element": "^3.2.12",
