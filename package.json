@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "bundle": "parcel build ./wwwroot/js/site.js --out-dir ./wwwroot/js/dist"
+    "bundle": "parcel build ./wwwroot/js/site.js --out-dir ./wwwroot/js/dist",
+    "build": "npm run bundle && eleventy --input=. --output=wwwroot"
   },
   "repository": {
     "type": "git",
