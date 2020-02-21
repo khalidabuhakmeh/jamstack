@@ -8,8 +8,12 @@
 
 <script>
     import axios from 'axios';
+    import { bus } from '../eventbus';
     
     export default {
+        mounted() {
+          bus.on('hello', this.hello);  
+        },
         data() {
             return {
                 email : '',
@@ -21,12 +25,17 @@
                 let data = {
                     email: this.email,
                 };
+                
+                bus.emit('hello', this.email);
 
                 axios
                     .post(`/newsletter`, data)
                     .then(response => {
                         alert(`Thank You!`);
                     });
+            },
+            hello(name) {
+                console.log(`hello from newsletter ${name}`);
             }
         }
     }

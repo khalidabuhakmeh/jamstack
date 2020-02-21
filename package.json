@@ -24,5 +24,8 @@
     "vue": "^2.6.11",
     "vue-custom-element": "^3.2.12",
     "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "EventEmitter": "^1.0.0"
   }
 }

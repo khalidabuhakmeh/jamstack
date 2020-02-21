@@ -31,8 +31,12 @@
 
 <script>
     import axios from 'axios';
+    import { bus } from '../eventbus';
     
     export default {
+        mounted() {
+            bus.on('hello', this.hello)
+        },
         data() {
             return {
                 name : '',
@@ -49,13 +53,17 @@
                     message: this.message
                 };
                 
-                console.log(this.name);
+                // let's let all the other components know
+                bus.emit('hello', this.name);
 
                 axios
                     .post(`/contact`, data)
                     .then(response => {
                         alert(`Thank You ${response.data.name}!`);
                     });
+            },
+            hello(name) {
+                console.log(`hello, from contact form ${name}!`);
             }
         }
     }
