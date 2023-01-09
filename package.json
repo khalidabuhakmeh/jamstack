@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/khalidabuhakmeh/jamstack#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^1.0.2",
     "@vue/component-compiler-utils": "^3.1.1",
     "axios": "^0.19.2",
     "parcel-bundler": "^1.12.4",
